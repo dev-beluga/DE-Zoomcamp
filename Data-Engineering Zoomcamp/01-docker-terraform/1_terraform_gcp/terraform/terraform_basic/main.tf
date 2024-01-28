@@ -32,3 +32,8 @@ resource "google_storage_bucket" "terra-demo" {
     }
   }
 }
+
+resource "google_bigquery_dataset" "demo_dataset" {
+  dataset_id = "ny_taxi_dataset"
+  
+}
