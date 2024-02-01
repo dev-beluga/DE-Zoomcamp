@@ -201,20 +201,20 @@ Thanks to the course sponsors for making it possible to run this course
 
 <p align="center">
   <a href="https://mage.ai/">
-    <img height="120" src="images/mage.svg">
+    <img height="120" src="https://github.com/DataTalksClub/data-engineering-zoomcamp/raw/main/images/mage.svg">
   </a>
 </p>
 
 
 <p align="center">
   <a href="https://dlthub.com/">
-    <img height="90" src="images/dlthub.png">
+    <img height="90" src="https://github.com/DataTalksClub/data-engineering-zoomcamp/raw/main/images/dlthub.png">
   </a>
 </p>
 
 <p align="center">
   <a href="https://risingwave.com/">
-    <img height="90" src="images/rising-wave.png">
+    <img height="90" src="https://github.com/DataTalksClub/data-engineering-zoomcamp/raw/main/images/rising-wave.png">
   </a>
 </p>
 
