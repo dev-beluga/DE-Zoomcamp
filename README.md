@@ -32,7 +32,7 @@ Syllabus
 * Preparing the environment for the course
 * Homework
 
-[More details](01-docker-terraform/)
+[More details](https://github.com/codeXXripper/DE-Zoomcamp/tree/main/Data-Engineering%20Zoomcamp/01-docker-terraform)
 
 
 ### [Module 2: Workflow Orchestration](02-workflow-orchestration/)
@@ -42,7 +42,7 @@ Syllabus
 * Workflow orchestration with Mage
 * Homework
 
-[More details](02-workflow-orchestration/)
+[More details](https://github.com/codeXXripper/DE-Zoomcamp/tree/main/Data-Engineering%20Zoomcamp/02-%20Workflow%20Orchestration)
 
 
 ### [Workshop 1: Data Ingestion](cohorts/2024/workshops/dlt.md)
