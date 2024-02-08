@@ -12,15 +12,6 @@ Syllabus
 * [Workshop 2: Stream Processing with SQL](#workshop-2-stream-processing-with-sql)
 * [Project](#project)
 
-## Taking the course
-
-### 2024 Cohort
-
-* **Start**: 15 January 2024 (Monday) at 17:00 CET
-* **Registration link**: https://airtable.com/shr6oVXeQvSI5HuWD
-* [Cohort folder](cohorts/2024/) with homeworks and deadlines
-* [Launch stream with course overview](https://www.youtube.com/live/AtRhA-NfS24?si=5JzA_E8BmJjiLi8l)
-
 
 ### [Module 1: Containerization and Infrastructure as Code](01-docker-terraform/)
 
@@ -45,7 +36,7 @@ Syllabus
 [More details](https://github.com/codeXXripper/DE-Zoomcamp/tree/main/Data-Engineering%20Zoomcamp/02-%20Workflow%20Orchestration)
 
 
-### [Workshop 1: Data Ingestion](cohorts/2024/workshops/dlt.md)
+### [Workshop 1: Data Ingestion](workshop-1-data-ingestion)
 
 * Reading from apis
 * Building scalable pipelines
@@ -54,7 +45,7 @@ Syllabus
 * Homework
 
 
-[More details](cohorts/2024/workshops/dlt.md)
+[More details](https://github.com/codeXXripper/DE-Zoomcamp/tree/main/Data-Engineering%20Zoomcamp/Workshops/Workshop%20with%20dlt)
 
 
 ### [Module 3: Data Warehouse](03-data-warehouse/)
