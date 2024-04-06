@@ -13,10 +13,11 @@ Pre-reqs:
 
 # services = ['fhv','green','yellow']
 # https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2022-01.parquet
-init_url = 'https://d37ci6vzurychx.cloudfront.net/trip-data/'
+init_url = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/tag/fhv'
+# init_url = 'https://d37ci6vzurychx.cloudfront.net/trip-data/'
 # switch out the bucketname
 
-BUCKET = os.environ.get("GCP_GCS_BUCKET", "ny-green_taxi_bucket")
+BUCKET = os.environ.get("GCP_GCS_BUCKET", "terraform-ny-taxi-bucket")
 
 
 def upload_to_gcs(bucket_name, object_name, local_file):
@@ -33,21 +34,26 @@ def web_to_gcs(year, service, bucket_name):
         month = f"{i+1:02d}"
         
         # Parquet file name
-        file_name = f"{service}_tripdata_{year}-{month}.parquet"
+        file_name = f"{service}_tripdata_{year}-{month}.csv.gz"
 
         # Download the Parquet file
         request_url = f"{init_url}{service}/{file_name}"
-        r = requests.get(request_url)
-        with open(file_name, 'wb') as f:
-            f.write(r.content)
-        print(f"Downloaded: {file_name}")
-
+        headers = {'Accept-Encoding': 'gzip'}  # Add gzip header
+        try:
+            
+            r = requests.get(request_url)
+            with open(file_name, 'wb') as f:
+                f.write(r.content)
+            print(f"Downloaded: {file_name}")
+        except requests.exceptions.RequestException as e:
+            print(f"Failed to download: {e}")
+            
         # Upload the Parquet file to Google Cloud Storage
         upload_to_gcs(bucket_name, f"{service}/{file_name}", file_name)
         print(f"Uploaded to GCS: {service}/{file_name}")
 
 # Example usage
-web_to_gcs('2022', 'green', 'ny-green_taxi_bucket')
+web_to_gcs('2019', 'fvh', 'terraform-ny-taxi-bucket')
 # web_to_gcs('2019', 'yellow')
 # web_to_gcs('2020', 'yellow')
 
